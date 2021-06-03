@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta property="og:image" content="https://sachi-d.github.io/myApps/Bunny_Hop/images/bunny-hop-screenshot.png">
+    <meta property="og:description" content="Bunny Hop is a very simple game - just click to play!">
+    <title>Bunny Hop</title>
+    <script src="lib/easeljs-0.8.2.min.js"></script>
+    <script src="lib/preloadjs-NEXT.min.js"></script>
+    <script src="lib/soundjs-0.6.2.min.js"></script>
+    <link rel="stylesheet" href="css/bunnyhop.css">
+    <script src="js/bunnyhop.js"></script>
+     </head>
+
+<body onload="init();">
+    <div id="page-body">
+        <div class="header">
+            <h1>Bunny Hop!</h1> </div>
+        <div class="decription">
+            <p> <span id="space-btn">Click</span> to play!
+                <br />Jump over rocks to survive!
+                <br />Catch carrots for points!
+                <br>
+               
+                <button class="my-btn" id="fb-share" onclick="fbs_click()">Share highscore <img src="images/fb-share-btn.png" height="12"></button>
+            </p>
+        </div>
+        <canvas id="gameCanvas" width="900" height="400"></canvas>
+    </div>
+    <script>
+        function fbs_click() {
+           
+            var msg = "https://www.facebook.com/sharer.php?u=https://sachi-d.github.io/myApps/Bunny_Hop/&title=Bunny%20Hop%20-%20My%20highscore%20is%20";
+            window.open(msg + hscoreText + "!!", 'sharer', 'toolbar=0,status=0,width=626,height=436');
+            return false;
+        }
+    </script>
+</body>
+
+</html>
